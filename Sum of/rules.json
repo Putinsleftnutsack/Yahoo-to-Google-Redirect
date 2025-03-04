@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "host": "www.google.com",
+          "path": "/search",
+          "queryTransform": {
+            "addOrReplaceParams": [
+              {
+                "key": "q",
+                "value": "Let's use Google instead :)"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "search.yahoo.com/search",
+      "resourceTypes": ["main_frame"],
+      "queryFilter": "p=*"
+    }
+  }
+]
